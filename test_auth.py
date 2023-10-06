@@ -6,6 +6,8 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
 
+from authy import PasswordChange, Signup
+
 class SignupViewTest(TestCase):
     def test_signup_view_with_valid_data(self):
         # Create a dictionary with valid form data
