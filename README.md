@@ -1,4 +1,4 @@
-Import necassary files
+Import required modules and classes:
 ```python
 import unittest
 import json
@@ -8,9 +8,17 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 ```
 
+1) **Define a test case class named SignupViewTest that subclasses django.test.TestCase. This class will contain test methods.**
 
 ```python
 class SignupViewTest(TestCase):
+```
+
+2) **Define two test methods within the SignupViewTest class:**
+
+   
+a) `test_signup_view_with_valid_data`: This method simulates a POST request to the signup view with valid form data. It checks whether the view correctly creates a user and redirects to the index page on success.
+```python
     def test_signup_view_with_valid_data(self):
 ```
 
@@ -34,10 +42,12 @@ Check if the response status code is 302 (redirect to index on success)
 ```
 
 Check if a user with the provided username exists
+
 ```python
         self.assertTrue(User.objects.filter(username='testuser').exists())
 ```
 
+b) `test_signup_view_with_invalid_data`: This method simulates a POST request to the signup view with invalid form data (missing required fields). It checks whether the view correctly handles form validation errors and returns a response with a status code of 200 and the expected error message.
 ```python
     def test_signup_view_with_invalid_data(self):
 ```
