@@ -22,7 +22,12 @@ a) `test_signup_view_with_valid_data`: This method simulates a POST request to t
     def test_signup_view_with_valid_data(self):
 ```
 
-Create a dictionary with valid form data
+Create a dictionary with **valid form data** that represents the form data to be submitted in the POST request.
+Use self.client.post() to send a POST request to the Signup view (reverse('signup') generates the URL for the view).
+Check the response using various self assertion methods:
+self.assertEqual(response.status_code, ...) checks the HTTP status code of the response.
+self.assertTrue(User.objects.filter(...).exists()) checks whether a user with the provided username exists in the database.
+self.assertContains(response, ...) checks whether a specific content string is present in the response content.
 ```python
         valid_data = {
             'username': 'testuser',
@@ -52,7 +57,12 @@ b) `test_signup_view_with_invalid_data`: This method simulates a POST request to
     def test_signup_view_with_invalid_data(self):
 ```
 
-Create a dictionary with invalid form data (missing required fields)
+Create a dictionary with **invalid form data** (missing required fields) that represents the form data to be submitted in the POST request.
+Use self.client.post() to send a POST request to the Signup view (reverse('signup') generates the URL for the view).
+Check the response using various self assertion methods:
+self.assertEqual(response.status_code, ...) checks the HTTP status code of the response.
+self.assertTrue(User.objects.filter(...).exists()) checks whether a user with the provided username exists in the database.
+self.assertContains(response, ...) checks whether a specific content string is present in the response content.
 ```python
         invalid_data = {
             'username': '',  # Missing username
