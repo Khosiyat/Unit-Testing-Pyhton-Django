@@ -48,12 +48,6 @@ class SignupViewTest(TestCase):
 
 # PasswordChange
 
-
-from django.contrib.auth.models import User
-from django.test import TestCase
-from django.urls import reverse
-from django.contrib.auth import login
-
 class PasswordChangeViewTest(TestCase):
     def setUp(self):
         # Create a user for testing
