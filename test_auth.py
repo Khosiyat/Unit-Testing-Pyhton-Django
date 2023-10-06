@@ -4,8 +4,6 @@ from flask import request
 
 from app import app
 
-
-```python
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -44,4 +42,3 @@ class SignupViewTest(TestCase):
         
         # Check if the form errors are displayed in the response content
         self.assertContains(response, "This field is required.")
-```
