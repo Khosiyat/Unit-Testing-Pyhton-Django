@@ -13,8 +13,6 @@ For example, you might create an integrated test suite that covers a user regist
 
 `class UserRegistrationAndNotificationIntegrationTest(TestCase):`
 
--
-
 Simulate user registration
     `def test_user_registration_and_notification_flow(self):`
 ```python
