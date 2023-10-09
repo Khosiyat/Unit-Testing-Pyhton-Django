@@ -19,7 +19,7 @@ Create a test user and profile
 Create a test image file
 ```python
         self.image_file = SimpleUploadedFile("test_image.jpg", b"file_content", content_type="image/jpeg")
-
+```
 `def test_edit_profile_view_get(self):`
 Log in the user
 ```python
