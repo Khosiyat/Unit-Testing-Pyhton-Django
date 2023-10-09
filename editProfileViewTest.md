@@ -55,6 +55,7 @@ Simulate a POST request to the edit profile page with valid form data
 Check if the response status code is 302 (redirect to index on success)
 ```python
         self.assertEqual(response.status_code, 302)
+```
 
 Refresh the profile instance from the database
 ```python
