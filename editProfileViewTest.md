@@ -96,17 +96,18 @@ Simulate a GET request to the edit profile page without logging in
         url = reverse('edit_profile')
         response = self.client.get(url)
 ```
+
 Check if the response status code is 302 (redirect to the login page)
 ```python
         self.assertEqual(response.status_code, 302)
 ```
+
 Check if the user is redirected to the login page
 ```python
         self.assertRedirects(response, reverse('login'))
 ```
 
 `def test_edit_profile_view_post_requires_login(self):`
-```
 Simulate a POST request to the edit profile page without logging in
 ```python
         url = reverse('edit_profile')
@@ -118,10 +119,12 @@ Simulate a POST request to the edit profile page without logging in
         }
         response = self.client.post(url, form_data, format='multipart')
 ```
+
 Check if the response status code is 302 (redirect to the login page)
 ```python
         self.assertEqual(response.status_code, 302)
 ```
+
 Check if the user is redirected to the login page
 ```python
         self.assertRedirects(response, reverse('login'))
