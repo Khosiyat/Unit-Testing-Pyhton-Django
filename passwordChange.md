@@ -11,7 +11,7 @@ from passwordChangeViewTest import PasswordChange
 ```
 
 
-# PasswordChange
+PasswordChange
 `class PasswordChangeViewTest(TestCase):`
 Create a user for testing
     `def setUp(self):`
