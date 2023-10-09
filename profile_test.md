@@ -37,6 +37,7 @@ Check if the response status code is 200 (OK)
 Check if the profile information is present in the response
 ```python
         self.assertContains(response, self.profile.user.username)
+```
 
 Check if the user's posts and startup posts are displayed
 ```python
@@ -46,7 +47,7 @@ Check if the user's posts and startup posts are displayed
         self.assertContains(response, 'Startup Post 2')
 ```
 
-`def test_user_profile_view_with_followers_and_following`
+**`def test_user_profile_view_with_followers_and_following`**
 Create some followers and following relationships
 ```python
     def test_user_profile_view_with_followers_and_following(self):
@@ -60,10 +61,12 @@ Simulate a request to the user profile page
         url = reverse('profile', args=[self.user.username])
         response = self.client.get(url)
 ```
+
 Check if the response status code is 200 (OK)
 ```python
         self.assertEqual(response.status_code, 200)
 ```
+
  Check if follower and following counts are displayed
 ```python
         self.assertContains(response, 'Followers: 1')
