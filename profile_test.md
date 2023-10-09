@@ -15,7 +15,7 @@ class UserProfileViewTest(TestCase):
         self.profile = Profile.objects.create(user=self.user)
 ```
 
-`def test_user_profile_view`
+**`def test_user_profile_view`**
 Create some test data, e.g., posts and favorites
 ```python
     def test_user_profile_view(self):
