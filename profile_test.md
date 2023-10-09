@@ -40,6 +40,7 @@ Check if the profile information is present in the response
 ```
 
 Check if the user's posts and startup posts are displayed
+
 ```python
         self.assertContains(response, 'Test Post 1')
         self.assertContains(response, 'Test Post 2')
