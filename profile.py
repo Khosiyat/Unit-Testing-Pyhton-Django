@@ -1,9 +1,3 @@
-from django.test import TestCase
-from django.urls import reverse
-from django.contrib.auth.models import User
-from django.contrib.auth import get_user_model
-from .models import Profile, Post, Post_StartUp, Follow
-
 
 def UserProfile(request, username):
 	user = get_object_or_404(User, username=username)
