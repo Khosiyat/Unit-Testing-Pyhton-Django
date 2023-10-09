@@ -46,7 +46,7 @@ Check if the user's posts and startup posts are displayed
         self.assertContains(response, 'Startup Post 2')
 ```
 
-`test_user_profile_view_with_followers_and_following`
+`def test_user_profile_view_with_followers_and_following`
 Create some followers and following relationships
 ```python
     def test_user_profile_view_with_followers_and_following(self):
